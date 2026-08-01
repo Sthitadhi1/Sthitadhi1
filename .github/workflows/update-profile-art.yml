@@ -2,10 +2,10 @@ name: Update profile art
 
 "on":
   schedule:
-    - cron: "17 6 * * *"   # ~06:17 UTC daily
+    - cron: "0 * * * *"   # Runs every hour
   workflow_dispatch: {}
   push:
-    branches: [main]
+    branches: [master, main]
 
 permissions:
   contents: write
@@ -19,9 +19,10 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r scripts/requirements.txt
-      - run: python scripts/fetch_contributions.py
+      - run: python scripts/fetch_contributions.py Sthitadhi1
       - run: python scripts/render_heatmap_svg.py
+      - run: python scripts/make_info_card.py
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg"
+          commit_message: "chore: real-time refresh contribution graph [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg info-card.svg"

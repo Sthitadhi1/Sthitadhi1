@@ -2,14 +2,19 @@ import os
 import sys
 import json
 import re
+import time
 from datetime import datetime, timedelta
 import requests
 from bs4 import BeautifulSoup
 
 def fetch_contributions(username="Sthitadhi1", output_json="data/contributions.json"):
-    url = f"https://github.com/users/{username}/contributions"
+    # Append timestamp query parameter to bypass HTTP caching
+    timestamp = int(time.time())
+    url = f"https://github.com/users/{username}/contributions?timestamp={timestamp}"
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache"
     }
 
     days_data = []
@@ -19,11 +24,9 @@ def fetch_contributions(username="Sthitadhi1", output_json="data/contributions.j
         if resp.status_code == 200:
             soup = BeautifulSoup(resp.text, "html.parser")
             
-            # Select all calendar day cells
             day_elements = soup.select(".ContributionCalendar-day[data-date], rect[data-date]")
             print(f"Scraped {len(day_elements)} day elements from GitHub for user '{username}'.")
             
-            # Pre-map tooltips by target ID
             tooltips = {}
             for tt in soup.find_all(["tool-tip", "div"], attrs={"for": True}):
                 tooltips[tt["for"]] = tt.text.strip()
@@ -65,7 +68,7 @@ def fetch_contributions(username="Sthitadhi1", output_json="data/contributions.j
 
     # Fallback if scraping failed to yield days
     if not days_data:
-        print("Using cached or simulated contribution data...")
+        print("Using cached contribution data...")
         if os.path.exists(output_json):
             with open(output_json, "r", encoding="utf-8") as f:
                 cached = json.load(f)
@@ -83,10 +86,8 @@ def fetch_contributions(username="Sthitadhi1", output_json="data/contributions.j
             })
             curr += timedelta(days=1)
 
-    # Sort days chronologically by date
     days_data.sort(key=lambda x: x["date"])
 
-    # Compute stats
     total_contributions = sum(d["count"] for d in days_data)
     
     current_streak = 0

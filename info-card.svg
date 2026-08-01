@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 560" width="490" height="560">
+<style>
+  .card-bg { fill: #0d1117; rx: 8px; stroke: #30363d; stroke-width: 1px; }
+  .title-bar { fill: #161b22; rx: 8px 8px 0 0; }
+  .title-text { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 13px; fill: #8b949e; font-weight: 600; }
+  .dot-red { fill: #ff5f56; }
+  .dot-yellow { fill: #ffbd2e; }
+  .dot-green { fill: #27c93f; }
+  .prompt { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 13px; fill: #58a6ff; font-weight: bold; }
+  .key { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12.5px; fill: #79c0ff; font-weight: 600; }
+  .val { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12.5px; fill: #c9d1d9; }
+  .accent { fill: #d2a8ff; font-weight: 600; }
+  @keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .anim-line { opacity: 0; animation: fadeInSlide 0.4s ease-out forwards; }
+</style>
+<rect class="card-bg" width="490" height="560" />
+<path d="M 0 0 h 490 a 8 8 0 0 1 8 8 v 28 h -498 v -28 a 8 8 0 0 1 8 -8 z" fill="#161b22"/>
+<circle class="dot-red" cx="20" cy="18" r="5.5" />
+<circle class="dot-yellow" cx="36" cy="18" r="5.5" />
+<circle class="dot-green" cx="52" cy="18" r="5.5" />
+<text class="title-text" x="72" y="22">avi@github ~ whoami</text>
+<g class="anim-line" style="animation-delay: 0.10s;">
+  <text class="prompt" x="24" y="65">avi@github ~ $ neofetch</text>
+</g>
+<g class="anim-line" style="animation-delay: 0.20s;">
+  <text class="key" x="24" y="100">OS:</text>
+  <text class="val" x="53" y="100">GitHub Terminal v2.4 (x86_64)</text>
+</g>
+<g class="anim-line" style="animation-delay: 0.32s;">
+  <text class="key" x="24" y="132">Host:</text>
+  <text class="val" x="71" y="132">Cloud & AI Infrastructure</text>
+</g>
+<g class="anim-line" style="animation-delay: 0.44s;">
+  <text class="key" x="24" y="164">Kernel:</text>
+  <text class="val" x="89" y="164">Python 3.12 / Rust / Go / C++</text>
+</g>
+<g class="anim-line" style="animation-delay: 0.56s;">
+  <text class="key" x="24" y="196">Uptime:</text>
+  <text class="val" x="89" y="196">5+ years in Software Development</text>
+</g>
+<g class="anim-line" style="animation-delay: 0.68s;">
+  <text class="key" x="24" y="228">Shell:</text>
+  <text class="val" x="80" y="228">zsh / bash / powershell</text>
+</g>
+<g class="anim-line" style="animation-delay: 0.80s;">
+  <text class="key" x="24" y="260">Now:</text>
+  <text class="val" x="62" y="260">Building Intelligent Agents & Scalable Systems</text>
+</g>
+<g class="anim-line" style="animation-delay: 0.92s;">
+  <text class="key" x="24" y="292">Prev:</text>
+  <text class="val" x="71" y="292">Full Stack & ML Systems Engineer</text>
+</g>
+<g class="anim-line" style="animation-delay: 1.04s;">
+  <text class="key" x="24" y="324">Stack:</text>
+  <text class="val" x="80" y="324">Python, TypeScript, React, PyTorch, Docker</text>
+</g>
+<g class="anim-line" style="animation-delay: 1.16s;">
+  <text class="key" x="24" y="356">Highlights:</text>
+  <text class="val" x="125" y="356">Open Source Contributor • AI Systems • Web Architecture</text>
+</g>
+<g class="anim-line" style="animation-delay: 1.28s;">
+  <text class="key" x="24" y="388">Location:</text>
+  <text class="val" x="107" y="388">San Francisco, CA / Remote</text>
+</g>
+<g class="anim-line" style="animation-delay: 1.40s;">
+  <text class="key" x="24" y="420">Status:</text>
+  <text class="val" x="89" y="420">🟢 Open to Collaborations & New Projects</text>
+</g>
+<g class="anim-line" style="animation-delay: 1.60s;">
+  <rect x="24" y="464" width="22" height="14" fill="#161b22" rx="3"/>
+  <rect x="50" y="464" width="22" height="14" fill="#f85149" rx="3"/>
+  <rect x="76" y="464" width="22" height="14" fill="#7ee787" rx="3"/>
+  <rect x="102" y="464" width="22" height="14" fill="#e3b341" rx="3"/>
+  <rect x="128" y="464" width="22" height="14" fill="#79c0ff" rx="3"/>
+  <rect x="154" y="464" width="22" height="14" fill="#d2a8ff" rx="3"/>
+  <rect x="180" y="464" width="22" height="14" fill="#56d4dd" rx="3"/>
+  <rect x="206" y="464" width="22" height="14" fill="#c9d1d9" rx="3"/>
+</g>
+</svg>

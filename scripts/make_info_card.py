@@ -1,7 +1,7 @@
 import os
 import sys
 
-def generate_info_card(output_path="info-card.svg"):
+def generate_info_card(output_path="info-card.svg", username="sthitadhi1"):
     is_static = os.getenv("STATIC", "0") == "1"
 
     width = 490
@@ -11,14 +11,14 @@ def generate_info_card(output_path="info-card.svg"):
     data = [
         {"key": "OS", "val": "GitHub Terminal v2.4 (x86_64)"},
         {"key": "Host", "val": "Cloud & AI Infrastructure"},
-        {"key": "Kernel", "val": "Python 3.12 / Rust / Go / C++"},
+        {"key": "Kernel", "val": "Python 3.12 / TypeScript / Rust"},
         {"key": "Uptime", "val": "5+ years in Software Development"},
         {"key": "Shell", "val": "zsh / bash / powershell"},
-        {"key": "Now", "val": "Building Intelligent Agents & Scalable Systems"},
-        {"key": "Prev", "val": "Full Stack & ML Systems Engineer"},
+        {"key": "Now", "val": "Building Intelligent Agents & Scalable Web Systems"},
+        {"key": "Prev", "val": "Full Stack & Machine Learning Engineer"},
         {"key": "Stack", "val": "Python, TypeScript, React, PyTorch, Docker"},
         {"key": "Highlights", "val": "Open Source Contributor • AI Systems • Web Architecture"},
-        {"key": "Location", "val": "San Francisco, CA / Remote"},
+        {"key": "Location", "val": "India / Remote"},
         {"key": "Status", "val": "🟢 Open to Collaborations & New Projects"},
     ]
 
@@ -56,7 +56,7 @@ def generate_info_card(output_path="info-card.svg"):
     svg_lines.append('<circle class="dot-red" cx="20" cy="18" r="5.5" />')
     svg_lines.append('<circle class="dot-yellow" cx="36" cy="18" r="5.5" />')
     svg_lines.append('<circle class="dot-green" cx="52" cy="18" r="5.5" />')
-    svg_lines.append(f'<text class="title-text" x="72" y="22">avi@github ~ whoami</text>')
+    svg_lines.append(f'<text class="title-text" x="72" y="22">{username}@github ~ whoami</text>')
 
     # Banner / Command Line
     start_y = 65
@@ -66,7 +66,7 @@ def generate_info_card(output_path="info-card.svg"):
     delays = 0.1
     anim_style = f'style="animation-delay: {delays:.2f}s;"' if not is_static else ''
     svg_lines.append(f'<g class="anim-line" {anim_style}>')
-    svg_lines.append(f'  <text class="prompt" x="24" y="{start_y}">avi@github ~ $ neofetch</text>')
+    svg_lines.append(f'  <text class="prompt" x="24" y="{start_y}">{username}@github ~ $ neofetch</text>')
     svg_lines.append('</g>')
 
     # Rows
@@ -76,7 +76,6 @@ def generate_info_card(output_path="info-card.svg"):
         anim_style = f'style="animation-delay: {delays:.2f}s;"' if not is_static else ''
         svg_lines.append(f'<g class="anim-line" {anim_style}>')
         svg_lines.append(f'  <text class="key" x="24" y="{current_y}">{item["key"]}:</text>')
-        # Calculate key padding
         key_width = len(item["key"]) * 9 + 35
         svg_lines.append(f'  <text class="val" x="{key_width}" y="{current_y}">{item["val"]}</text>')
         svg_lines.append('</g>')
@@ -101,4 +100,4 @@ def generate_info_card(output_path="info-card.svg"):
     print(f"Info card SVG generated to {output_path}")
 
 if __name__ == "__main__":
-    generate_info_card("info-card.svg")
+    generate_info_card("info-card.svg", "sthitadhi1")

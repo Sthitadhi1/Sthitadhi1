@@ -17,11 +17,12 @@ MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "O
 def render_heatmap_svg(json_path="data/contributions.json", output_path="contrib-heatmap.svg"):
     if not os.path.exists(json_path):
         print(f"Error: {json_path} not found. Run fetch_contributions.py first.")
-        sys.argv[1]
+        sys.exit(1)
 
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
+    username = data.get("username", "sthitadhi").lower()
     days = data.get("days", [])
     total_contribs = data.get("total_contributions", 0)
     current_streak = data.get("current_streak", 0)
@@ -38,8 +39,6 @@ def render_heatmap_svg(json_path="data/contributions.json", output_path="contrib
     start_x = 45
     start_y = 65
     
-    # Organize days into 53 weeks x 7 days
-    # Week 0..52
     weeks = [[] for _ in range(53)]
     
     if days:
@@ -79,13 +78,12 @@ def render_heatmap_svg(json_path="data/contributions.json", output_path="contrib
     svg_lines.append(f'<rect class="bg" width="{width}" height="{height}" />')
 
     # Header Title
-    svg_lines.append(f'<text class="title" x="20" y="32">avi@github ~ $ ./contributions.sh</text>')
+    svg_lines.append(f'<text class="title" x="20" y="32">{username}@github ~ $ ./contributions.sh</text>')
     svg_lines.append(f'<text class="sub" x="{width - 240}" y="32">{total_contribs:,} contributions in past year</text>')
 
     # Month labels
     last_month = -1
     for w in range(53):
-        # find first non-none day in this week
         for d in weeks[w]:
             if d:
                 dt = datetime.strptime(d["date"], "%Y-%m-%d")
@@ -116,7 +114,6 @@ def render_heatmap_svg(json_path="data/contributions.json", output_path="contrib
                     level = len(PALETTE) - 1
                 color = PALETTE[level]
                 
-                # Diagonal animation stagger calculation
                 diag = w + r
                 delay = round((diag / 60.0) * 1.4, 3)
                 
@@ -151,7 +148,7 @@ def render_heatmap_svg(json_path="data/contributions.json", output_path="contrib
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(svg_lines))
-    print(f"Heatmap SVG generated to {output_path}")
+    print(f"Heatmap SVG re-generated to {output_path}")
 
 if __name__ == "__main__":
     render_heatmap_svg()

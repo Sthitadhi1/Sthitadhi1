@@ -14,7 +14,7 @@
 </style>
 <rect class="bg" width="860" height="230" />
 <text class="title" x="20" y="32">sthitadhi1@github ~ $ ./contributions.sh</text>
-<text class="sub" x="620" y="32">144 contributions in past year</text>
+<text class="sub" x="620" y="32">145 contributions in past year</text>
 <text class="label" x="45" y="55">Aug</text>
 <text class="label" x="120" y="55">Sep</text>
 <text class="label" x="180" y="55">Oct</text>
@@ -290,7 +290,7 @@
 <rect class="box" x="585" y="140" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 0.957s;"><title>0 contributions on 2026-04-17</title></rect>
 <rect class="box" x="585" y="155" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 0.98s;"><title>0 contributions on 2026-04-18</title></rect>
 <rect class="box" x="600" y="65" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 0.863s;"><title>0 contributions on 2026-04-19</title></rect>
-<rect class="box" x="600" y="80" width="11" height="11" fill="#26a641" rx="2" style="animation-delay: 0.887s;"><title>7 contributions on 2026-04-20</title></rect>
+<rect class="box" x="600" y="80" width="11" height="11" fill="#006d32" rx="2" style="animation-delay: 0.887s;"><title>7 contributions on 2026-04-20</title></rect>
 <rect class="box" x="600" y="95" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 0.91s;"><title>0 contributions on 2026-04-21</title></rect>
 <rect class="box" x="600" y="110" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 0.933s;"><title>0 contributions on 2026-04-22</title></rect>
 <rect class="box" x="600" y="125" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 0.957s;"><title>0 contributions on 2026-04-23</title></rect>
@@ -335,8 +335,8 @@
 <rect class="box" x="690" y="80" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 1.027s;"><title>0 contributions on 2026-06-01</title></rect>
 <rect class="box" x="690" y="95" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 1.05s;"><title>0 contributions on 2026-06-02</title></rect>
 <rect class="box" x="690" y="110" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 1.073s;"><title>0 contributions on 2026-06-03</title></rect>
-<rect class="box" x="690" y="125" width="11" height="11" fill="#006d32" rx="2" style="animation-delay: 1.097s;"><title>4 contributions on 2026-06-04</title></rect>
-<rect class="box" x="690" y="140" width="11" height="11" fill="#26a641" rx="2" style="animation-delay: 1.12s;"><title>7 contributions on 2026-06-05</title></rect>
+<rect class="box" x="690" y="125" width="11" height="11" fill="#0e4429" rx="2" style="animation-delay: 1.097s;"><title>4 contributions on 2026-06-04</title></rect>
+<rect class="box" x="690" y="140" width="11" height="11" fill="#006d32" rx="2" style="animation-delay: 1.12s;"><title>7 contributions on 2026-06-05</title></rect>
 <rect class="box" x="690" y="155" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 1.143s;"><title>0 contributions on 2026-06-06</title></rect>
 <rect class="box" x="705" y="65" width="11" height="11" fill="#006d32" rx="2" style="animation-delay: 1.027s;"><title>5 contributions on 2026-06-07</title></rect>
 <rect class="box" x="705" y="80" width="11" height="11" fill="#0e4429" rx="2" style="animation-delay: 1.05s;"><title>3 contributions on 2026-06-08</title></rect>
@@ -395,8 +395,8 @@
 <rect class="box" x="810" y="140" width="11" height="11" fill="#0e4429" rx="2" style="animation-delay: 1.307s;"><title>2 contributions on 2026-07-31</title></rect>
 <rect class="box" x="810" y="155" width="11" height="11" fill="#39d353" rx="2" style="animation-delay: 1.33s;"><title>13 contributions on 2026-08-01</title></rect>
 <rect class="box" x="825" y="65" width="11" height="11" fill="#39d353" rx="2" style="animation-delay: 1.213s;"><title>13 contributions on 2026-08-02</title></rect>
-<rect class="box" x="825" y="80" width="11" height="11" fill="#39d353" rx="2" style="animation-delay: 1.237s;"><title>10 contributions on 2026-08-03</title></rect>
-<rect class="box" x="825" y="95" width="11" height="11" fill="#39d353" rx="2" style="animation-delay: 1.26s;"><title>16 contributions on 2026-08-04</title></rect>
+<rect class="box" x="825" y="80" width="11" height="11" fill="#26a641" rx="2" style="animation-delay: 1.237s;"><title>10 contributions on 2026-08-03</title></rect>
+<rect class="box" x="825" y="95" width="11" height="11" fill="#39d353" rx="2" style="animation-delay: 1.26s;"><title>17 contributions on 2026-08-04</title></rect>
 <rect x="825" y="110" width="11" height="11" fill="#161b22" rx="2" opacity="0.3"/>
 <rect x="825" y="125" width="11" height="11" fill="#161b22" rx="2" opacity="0.3"/>
 <rect x="825" y="140" width="11" height="11" fill="#161b22" rx="2" opacity="0.3"/>

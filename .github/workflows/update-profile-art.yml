@@ -2,7 +2,7 @@ name: Update profile art
 
 "on":
   schedule:
-    - cron: "0 * * * *"   # Runs every hour
+    - cron: "27 * * * *"   # Runs hourly at minute 27 to avoid top-of-hour GitHub runner queue load
   workflow_dispatch: {}
   push:
     branches: [master, main]
@@ -13,11 +13,13 @@ permissions:
 jobs:
   heatmap:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
       - run: pip install -r scripts/requirements.txt
       - run: python scripts/fetch_contributions.py Sthitadhi1
       - run: python scripts/render_heatmap_svg.py
